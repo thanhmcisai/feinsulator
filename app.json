@@ -1,0 +1,33 @@
+{
+    "apps": [{
+      "name": "Nhan-dien-loi",
+      "script": "npm run start",
+      "watch": false,
+      "env_development": {
+        "NODE_ENV": "development",
+        "MODE": "dev-server"
+      },
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "env_DEBUG": {
+        "NODE_ENV": "production"
+      },
+      "ignore_watch": [
+        "node_modules",
+        "logs",
+        "bower_components",
+        ".tmp",
+        ".vscode",
+        "views",
+        "routes",
+        "public",
+        ".next"
+      ],
+      "error_file": "./logs/error.log",
+      "out_file": "./logs/out.log",
+      "pid_file": "./logs/app.pid",
+      "log_date_format": "YYYY-MM-DD HH:mm Z"
+    }]
+  }
+  
