@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     };
 
     // Gọi Python API (Giả định route)
-    const aiServerUrl = "http://192.168.6.88:5555/api/v1/insulator/create-bbox";
+    const aiServerUrl = `${process.env.AI_SERVER_URL}/api/v1/insulator/create-bbox`;
 
     const response = await axios.post(aiServerUrl, payload);
 

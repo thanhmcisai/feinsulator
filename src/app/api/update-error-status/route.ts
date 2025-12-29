@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
 
     // 4. Gọi API Backend (Python/Flask) để cập nhật Database
     // Lưu ý: Bạn cần thay đổi đường dẫn '/api/v1/update_bbox' theo đúng API của bên Python
-    const aiServerUrl = "http://192.168.6.88:5555/api/v1/insulator/update-bbox";
+    const aiServerUrl = `${process.env.AI_SERVER_URL}/api/v1/insulator/update-bbox`;
 
     const response = await axios.put(aiServerUrl, payload, {
       headers: {

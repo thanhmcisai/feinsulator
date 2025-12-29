@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ```
 docker build -t fe_insulator .
-docker run -d -p 4356:4356 --name fe_insulator_cont fe_insulator
+docker run -d -p 4356:4356 -e AI_SERVER_URL=http://192.168.6.88:5555 --name fe_insulator_cont fe_insulator
 
 ```
 

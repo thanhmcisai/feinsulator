@@ -226,7 +226,7 @@ export async function POST(request: NextRequest) {
 
     // Gửi request đến API bên ngoài
     const response = await axios.post(
-      "http://192.168.6.88:5555/api/v1/insulator_api/predict",
+      `${process.env.AI_SERVER_URL}/api/v1/insulator_api/predict`,
       externalFormData
     );
     const data: AIServerPredictResponse = response.data;
